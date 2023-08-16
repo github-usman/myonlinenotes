@@ -1,0 +1,15 @@
+{
+  "name": "onlinenotebook",
+  "version": "1.0.0",
+  "description": "your notebook on the internet and i will available 24 hours you can access it by you authentication or login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Usman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3"
+  }
+}
