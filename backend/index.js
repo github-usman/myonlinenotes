@@ -2,6 +2,10 @@ import { connectToMongo } from './db.js';
 import express from 'express';
 import authRoutes from './routes/auth.js';
 import notesRoutes from './routes/notes.js';
+import cors from 'cors';
+
+
+
 
 // MongoDB database connection
 connectToMongo();
@@ -9,7 +13,9 @@ connectToMongo();
 const app = express();
 const port = 5000;
 
-// middleware to parse the object into json are follow helper
+// middleware to parse the   object into json are follow helper
+
+app.use(cors())   // for local hosting
 app.use(express.json());
 
 // http requestion get method root

@@ -3,15 +3,23 @@ import NoteContext from "../context/notes/NoteContext";
 import { useContext } from "react";
 
 function AddNote() {
-    const context = useContext(NoteContext);
-    const {addNotes} = context;
+  const context = useContext(NoteContext);
+  const { addNotes } = context;
 
-  const [note, setNote] = useState({ title: "", description: "", tag: "default" });
+  const [note, setNote] = useState({
+    title: "",
+    description: "",
+    tag: "",
+  });
   const handleClick = (e) => {
     e.preventDefault();
-
-    addNotes(note.title,note.description,note.tag);
+    addNotes(note.title, note.description, note.tag);
+    setNote({ title: "",
+    description: "",
+    tag: "",})
   };
+
+  // for fomatted coppy
 
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
@@ -34,28 +42,48 @@ function AddNote() {
               id="title"
               name="title"
               aria-describedby="emailHelp"
+              minLength={5}
+              required
+              value={note.title}
             />
           </div>
           <div className="mb-3">
             <label htmlFor="description" className="form-label">
               Description
             </label>
-            <input
+            <textarea
               onChange={onChange}
               type="text"
               className="form-control"
               id="description"
               name="description"
+              rows="6"
+              minLength={5}
+              required
+              value={note.description}
             />
           </div>
-       
+          <div className="mb-3">
+            <label htmlFor="tag" className="form-label">
+              Tag
+            </label>
+            <input
+              onChange={onChange}
+              type="text"
+              className="form-control"
+              id="tag"
+              name="tag"
+              value={note.tag}
+            />
+          </div>
+
           <button
             onClick={handleClick}
             type="submit"
             className="btn btn-primary"
-            
+            disabled={note.title.length<5 || note.description.length<5 } 
           >
-            submit
+            Add Note
           </button>
         </form>
       </div>
