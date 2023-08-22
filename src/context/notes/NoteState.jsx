@@ -15,7 +15,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjMwMDE1Mn0.KLngvQR68eurC2n_y0-H7t36ySwmOOc1ghBqNkQT-Rg",
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjcxMDA1M30.s5I_XabY-R2LOBf5QMP4V7kNlV2Es6jccuM0CkCDa4M',
       },
       
     }); 
@@ -34,7 +34,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjMwMDE1Mn0.KLngvQR68eurC2n_y0-H7t36ySwmOOc1ghBqNkQT-Rg",
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjcxMDA1M30.s5I_XabY-R2LOBf5QMP4V7kNlV2Es6jccuM0CkCDa4M',
       },
       body: JSON.stringify({title,description,tag}),
     }); 
@@ -56,7 +56,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjMwMDE1Mn0.KLngvQR68eurC2n_y0-H7t36ySwmOOc1ghBqNkQT-Rg",
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjcxMDA1M30.s5I_XabY-R2LOBf5QMP4V7kNlV2Es6jccuM0CkCDa4M',
       },
       body: JSON.stringify({title,description,tag}),
     });
@@ -85,7 +85,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjMwMDE1Mn0.KLngvQR68eurC2n_y0-H7t36ySwmOOc1ghBqNkQT-Rg",
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkZTZjNTNiZTc5NGQ0Y2E0MWViNTUwIn0sImlhdCI6MTY5MjcxMDA1M30.s5I_XabY-R2LOBf5QMP4V7kNlV2Es6jccuM0CkCDa4M',
       },
      
     });

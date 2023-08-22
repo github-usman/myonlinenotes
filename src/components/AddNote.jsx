@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import NoteContext from "../context/notes/NoteContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 
 function AddNote() {
@@ -27,8 +29,25 @@ function AddNote() {
 
   return (
     <div>
-      <div className="container my-3">
-        <h2>Add a Note</h2>
+      <div className="container my-3 ">
+        <div className="text-center pb-2">
+   
+      <FontAwesomeIcon
+         style={{height:"40px",marginTop:"10px",color:"blue"}}
+        role="button"
+       
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseExample" 
+        aria-expanded="false" 
+        bounce 
+        aria-controls="collapseExample"
+      icon={faCirclePlus}
+      />
+   
+      </div>
+      <div className="collapse" id="collapseExample">
+         <div className="card card-body">
+         
         <form className="my-3 ">
           <div className="mb-3">
             <label htmlFor="title" className="form-label">
@@ -49,7 +68,7 @@ function AddNote() {
           </div>
           <div className="mb-3">
             <label htmlFor="description" className="form-label">
-              Description
+             Description  (<span style={{fontWeight:"10px",color:"grey"}}>to <span style={{backgroundColor:"yellow"}}>Highlight</span> enclosed that sentence with *** and for <strong>bold</strong> enclosed with %%</span>)
             </label>
             <textarea
               onChange={onChange}
@@ -86,6 +105,8 @@ function AddNote() {
             Add Note
           </button>
         </form>
+         </div>
+        </div>
       </div>
     </div>
   );

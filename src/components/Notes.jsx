@@ -6,13 +6,14 @@ import AddNote from "./AddNote";
 function Notes() {
   const context = useContext(NoteContext);
   const { notes, getNotes,editNotes } = context;
-  const [note, setNote] = useState({ id:"",etitle: "", edescription: "", etag: "default" });
+   const [note, setNote] = useState({ id:"",etitle: "", edescription: "", etag: "default" });
   useEffect(() => {
     getNotes();
     // eslint-disable-next-line
   }, []);
   const ref = useRef(null);
   const refClose=useRef(null);
+ 
 
   const updateNotes = (currentNote) => {
     ref.current.click();
@@ -31,7 +32,7 @@ function Notes() {
   };
 
   return (
-    <div>
+    <div className="container">
       <AddNote />
 
       <button
@@ -135,16 +136,19 @@ function Notes() {
         </div>
       </div>
 
-      <div className="container row my-3">
-        <h2>Your Notes</h2>
+      <div className="container">
+        <h2 className="pt-2 pb-2">Your Notes</h2>
         <div>
         {notes.length ===0 && "There is no Note to show"}
         </div>
+        <div >
         { notes.map((note,index) => {
           return (
+            
             <NoteItem updateNotes={updateNotes}  key={index} note={note} />
           );
         })}
+        </div>
       </div>
     </div>
   );

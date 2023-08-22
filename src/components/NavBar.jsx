@@ -7,7 +7,7 @@ export default function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg  navbar-light">
+      <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             OnlineNotebook
@@ -47,15 +47,13 @@ export default function NavBar() {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
+             
+              <Link to="/login" className="btn btn-outline-primary mx-1" role="button">
+                Login
+              </Link>
+              <Link to="/signup"  className="btn btn-outline-primary mx-1" role="button">
+                SignUp
+              </Link>
             </form>
           </div>
         </div>

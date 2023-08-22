@@ -1,7 +1,9 @@
-.icon_cursor{
-    cursor: pointer;
-}
-h5{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900
-}
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+   
+  }
+
