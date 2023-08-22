@@ -2,19 +2,25 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
-function Alert() {
+function Alert(props) {
+ 
+  const capitalize = (word) => {
+    if(word === "danger"){
+        word = "Error!"
+    }
+    const lower = word.toLowerCase();
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
+  };
+
   return (
-    <div>
-      <div className="alert alert-warning alert-dismissible fade show" role="alert">
-        <FontAwesomeIcon  icon={faBell} shake size="xl" />
-        <strong className="ms-3">Welcome!</strong> to online Notebook you can write your ynote.
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
+    <div style={{height:'50px'}}>
+      
+      {props.alert && (
+        <div className={`alert alert-${props.alert.type} `} role="alert">
+          <FontAwesomeIcon  className="me-2" icon={faBell} shake size="xl" />
+          <strong>{capitalize(props.alert.type)}</strong> : {props.alert.msg}
+        </div>
+      )}
     </div>
   );
 }

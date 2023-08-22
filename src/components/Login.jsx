@@ -18,13 +18,14 @@ const Login = (props) => {
       }),
     });
     const json = await response.json();
-    console.log(json);
+   
     if (json.success) {
       //     // Save the auth token and redirect
-      localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("token", json.authToken);
       navigate("/");
+      props.showAlert("Logged in Successfully","success");
     } else {
-      alert("Invalid credentials");
+        props.showAlert("Invalid Credentials","danger");
     }
   };
 

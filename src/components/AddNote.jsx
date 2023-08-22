@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 
-function AddNote() {
+function AddNote(props) {
   const context = useContext(NoteContext);
   const { addNotes } = context;
 
@@ -19,6 +19,7 @@ function AddNote() {
     setNote({ title: "",
     description: "",
     tag: "",})
+    props.showAlert("Added successfully","success");
   };
 
   // for fomatted coppy

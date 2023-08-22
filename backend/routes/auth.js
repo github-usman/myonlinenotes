@@ -70,7 +70,7 @@ router.post(
   async (req, res) => {
     let success = false;
     // if there are errors return Bad message and all errors
-    console.log("login block");
+    
     const error = validationResult(req);
     if (!error.isEmpty()) {
       return res.status(400).json({ success,error: error.array() });

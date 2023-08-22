@@ -44,6 +44,7 @@ function NoteItem(props) {
                 className="text-danger"
                 onClick={() => {
                   deleteNotes(note._id);
+                  props.showAlert("Deleted successfully","success")
                 }}
                 icon={faTrash}
                 size="xl"
@@ -54,6 +55,7 @@ function NoteItem(props) {
                 className="text-warning"
                 onClick={() => {
                   updateNotes(note);
+                  
                 }}
                 icon={faPenToSquare}
                 size="xl"
