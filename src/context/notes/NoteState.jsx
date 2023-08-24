@@ -1,7 +1,10 @@
 import { useState } from "react";
 import NoteContext from "./NoteContext";
 const NoteState = (props) => {
-  const host = "http://localhost:5000/";
+  
+  
+const host = process.env.REACT_APP_API_URL;
+
   const staticNotes = [];
   const [notes, setNotes] = useState(staticNotes);
     

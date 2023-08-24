@@ -27,8 +27,8 @@ function NoteItem(props) {
   };
 
   return (
-    <div className="col-sm mb-3"  >
-      <div className="card mt-2">
+    <div className="col-sm mb-3 "  >
+      <div className="card mt-2 card_body">
         <div className="card-body">
           <h5 className="card-title">{note.title}</h5>
           <pre className="card-text">

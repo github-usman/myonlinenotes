@@ -1,0 +1,11 @@
+.custom-center {
+    margin-top:30px !important;
+    margin-bottom: 30px !important;
+    width: 25%;
+    margin: 0 auto;
+    border: dotted #040D12;
+    border-width: 5px 0px 0px 0px;
+  }
+  /* p{
+    color: blue;
+  } */

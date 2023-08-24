@@ -67,7 +67,7 @@ function Notes(props) {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-etitle" id="exampleModalLabel">
-                Modal title
+              Edit Notes
               </h5>
               <button
                 type="button"

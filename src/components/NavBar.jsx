@@ -17,7 +17,7 @@ export default function NavBar(props) {
       <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            OnlineNotebook
+            MyOnlineNotes
           </Link>
           <button
             className="navbar-toggler"
@@ -55,13 +55,13 @@ export default function NavBar(props) {
             </ul>
            {!localStorage.getItem('token') ? <form className="d-flex" role="search">
              
-              <Link to="/login" className="btn btn-outline-primary mx-1" role="button">
+              <Link to="/login" className="btn btn-outline-light mx-1" role="button">
                 Login
               </Link>
-              <Link to="/signup"  className="btn btn-outline-primary mx-1" role="button">
+              <Link to="/signup"  className="btn btn-outline-light mx-1" role="button">
                 SignUp
               </Link>
-            </form>:<button onClick={handleLogout} className="btn btn-primary">Log Out</button>}
+            </form>:<button onClick={handleLogout} className="btn btn-outline-light">Log Out</button>}
           </div>
         </div>
       </nav>

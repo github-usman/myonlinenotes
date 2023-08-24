@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
+  const host = process.env.REACT_APP_API_URL;
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -13,7 +14,7 @@ const SignUp = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credentials;
-    const response = await fetch("http://localhost:5000/auth/createuser", {
+    const response = await fetch(`${host}auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +36,8 @@ const SignUp = (props) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
-    <div>
+    <div className="mt-3 ">
+        <h3 className="my-3">Create an account to continue to MyOnlineNotes</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
